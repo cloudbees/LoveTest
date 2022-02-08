@@ -26,8 +26,7 @@ public class StepsDefinitions {
     }
     @Then("Developers love CloudBees")
     public void developers_love_CloudBees() {
-        assertThat("Developers do not love what cloudbees enables", developers.love(cloudbees.enables()),
+        assertThat(developers.love(cloudbees),
                 is(true));
     }
-
 }
