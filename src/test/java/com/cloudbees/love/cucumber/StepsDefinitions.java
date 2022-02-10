@@ -2,6 +2,7 @@ package com.cloudbees.love.cucumber;
 
 import com.cloudbees.love.CloudBees;
 import com.cloudbees.love.Developers;
+import com.cloudbees.love.Thing;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -11,9 +12,10 @@ import static org.junit.Assert.assertThat;
 
 public class StepsDefinitions {
 
-    public static final String TO_DELIVER_GREAT_SOFTWARE = "to deliver great software";
     private Developers developers;
     private CloudBees cloudbees;
+
+    private static Thing TO_DELIVER_GREAT_SOFTWARE = new Thing("GREAT SOFTWARE") {};
 
     @Given("Developers love to deliver great software")
     public void developers_love_to_deliver_great_software() {

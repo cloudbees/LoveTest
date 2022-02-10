@@ -7,5 +7,5 @@ import java.util.List;
  */
 public interface ToolProvider {
 
-    public List<String> enables();
+    public List<Thing> enables();
 }

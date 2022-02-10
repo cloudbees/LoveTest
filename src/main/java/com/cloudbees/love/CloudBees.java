@@ -2,7 +2,6 @@ package com.cloudbees.love;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * CloudBees provides the leading DevOps solutions for large and compliance-first organizations.
@@ -12,14 +11,14 @@ import java.util.stream.Collectors;
  */
 public class CloudBees implements ToolProvider {
 
-    private List<String> enables;
+    private List<Thing> enables;
 
-    public CloudBees(String... cloudbeesFeatures) {
-        enables = Arrays.stream(cloudbeesFeatures).map(it -> it.toLowerCase()).collect(Collectors.toList());
+    public CloudBees(Thing... cloudbeesFeatures) {
+        enables = Arrays.asList(cloudbeesFeatures);
     }
 
     @Override
-    public List<String> enables() {
+    public List<Thing> enables() {
         return enables;
     }
 }
